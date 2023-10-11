@@ -1,0 +1,42 @@
+cmake version 3.27.7
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+clang version 16.0.6
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+1.11.1
+-- The CXX compiler identification is Clang 16.0.6
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/clang++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+[33mCMake Warning (dev) at CMakeLists.txt:15 (target_sources):
+  CMake's C++ module support is experimental.  It is meant only for
+  experimentation and feedback to CMake developers.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+[33mCMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_RULE_MESSAGES
+    CMAKE_VERBOSE_MAKEFILE
+
+[0m
+-- Build files have been written to: /home/niklas/Documents/GitHub/CppModulesExamples/cmake_2023/build
+Change Dir: '/home/niklas/Documents/GitHub/CppModulesExamples/cmake_2023/build'
+
+Run Build Command(s): /usr/bin/ninja -v
+[1/8] "/usr/bin/clang-scan-deps" -format=p1689 -- /usr/bin/clang++   -std=c++20 -x c++ /home/niklas/Documents/GitHub/CppModulesExamples/cmake_2023/src/main.cxx -c -o CMakeFiles/hello.dir/src/main.cxx.o -MT CMakeFiles/hello.dir/src/main.cxx.o.ddi -MD -MF CMakeFiles/hello.dir/src/main.cxx.o.ddi.d > CMakeFiles/hello.dir/src/main.cxx.o.ddi
+[2/8] "/usr/bin/clang-scan-deps" -format=p1689 -- /usr/bin/clang++   -std=c++20 -x c++ /home/niklas/Documents/GitHub/CppModulesExamples/cmake_2023/src/foo.cxx -c -o CMakeFiles/foo.dir/src/foo.cxx.o -MT CMakeFiles/foo.dir/src/foo.cxx.o.ddi -MD -MF CMakeFiles/foo.dir/src/foo.cxx.o.ddi.d > CMakeFiles/foo.dir/src/foo.cxx.o.ddi
+[3/8] /usr/bin/cmake -E cmake_ninja_dyndep --tdi=CMakeFiles/foo.dir/CXXDependInfo.json --lang=CXX --modmapfmt=clang --dd=CMakeFiles/foo.dir/CXX.dd @CMakeFiles/foo.dir/CXX.dd.rsp
+[4/8] /usr/bin/cmake -E cmake_ninja_dyndep --tdi=CMakeFiles/hello.dir/CXXDependInfo.json --lang=CXX --modmapfmt=clang --dd=CMakeFiles/hello.dir/CXX.dd @CMakeFiles/hello.dir/CXX.dd.rsp
+[5/8] /usr/bin/clang++   -std=c++20 -MD -MT CMakeFiles/foo.dir/src/foo.cxx.o -MF CMakeFiles/foo.dir/src/foo.cxx.o.d @CMakeFiles/foo.dir/src/foo.cxx.o.modmap -o CMakeFiles/foo.dir/src/foo.cxx.o -c /home/niklas/Documents/GitHub/CppModulesExamples/cmake_2023/src/foo.cxx
+[6/8] /usr/bin/clang++   -std=c++20 -MD -MT CMakeFiles/hello.dir/src/main.cxx.o -MF CMakeFiles/hello.dir/src/main.cxx.o.d @CMakeFiles/hello.dir/src/main.cxx.o.modmap -o CMakeFiles/hello.dir/src/main.cxx.o -c /home/niklas/Documents/GitHub/CppModulesExamples/cmake_2023/src/main.cxx
+[7/8] : && /usr/bin/cmake -E rm -f libfoo.a && /usr/bin/llvm-ar qc libfoo.a  CMakeFiles/foo.dir/src/foo.cxx.o && /usr/bin/llvm-ranlib libfoo.a && :
+[8/8] : && /usr/bin/clang++   CMakeFiles/hello.dir/src/main.cxx.o -o hello  libfoo.a && :
+
+hello world
